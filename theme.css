@@ -1,0 +1,23 @@
+/* @theme fougere
+   @name Fougère rouge
+   @desc Le look d’origine : jam arcade rouge/orange, un peu trop sérieux pour des jeux cons.
+*/
+:root {
+  --bg: #09050a;
+  --bg-2: #14080f;
+  --red: #ff2d2d;
+  --orange: #ff7a18;
+  --pink: #ff4d8d;
+  --cream: #ffe8d6;
+  --muted: #c9a8a0;
+  --card: #1a0c14;
+  --line: #3a1824;
+  --ink: #1a0508;
+  --shadow: #4a1200;
+  --glow: rgba(255, 45, 45, 0.45);
+  --nav-glass: rgba(9, 5, 10, 0.88);
+  --scanline-opacity: 0.35;
+  --font-display: "Press Start 2P", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, sans-serif;
+  --font-pixel: "VT323", monospace;
+}
