@@ -1,0 +1,21 @@
+{% from "macros.njk" import itchIcon, youtubeIcon %}
+<div>
+  <img
+    src="{{ site.avatar }}"
+    class="hero-img mb-4 rounded-circle"
+    alt="{{ site.name }}"
+    width="140"
+    height="140"
+    loading="lazy"
+  />
+  <h2 class="fw-bold mt-3">{{ site.name }}</h2>
+  <p>{{ site.sidebar_bio }}</p>
+  <div class="sidebar-links">
+    <a href="{{ site.itch_url }}" class="btn btn-outline-primary btn-lg" target="_blank" rel="noopener noreferrer">
+      {{ itchIcon() }}Itch.io
+    </a>
+    <a href="{{ site.youtube_url }}" class="btn btn-outline-primary btn-lg" target="_blank" rel="noopener noreferrer">
+      {{ youtubeIcon() }}YouTube
+    </a>
+  </div>
+</div>

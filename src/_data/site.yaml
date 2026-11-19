@@ -1,0 +1,17 @@
+title: "FougereBle — je joue à créer des jeux"
+description: "Je fais des jeux vidéo sur mon temps libre. De la 2D, de la 3D, de la modélisation Blender, je touche un peu à tout."
+url: "https://fougereble.fr"
+lang: fr
+name: FougereBle
+avatar: /assets/avatar.png
+sidebar_bio: "Je joue à créer des jeux vidéos sur mon temps libre, principalement avec Godot. Je fait aussi de la modélisation 3D avec Blender."
+og_image: /assets/bouga-banner.png
+itch_url: "https://fougereble.itch.io/"
+youtube_url: "https://www.youtube.com/@fougereble"
+social:
+  - label: Itch.io
+    url: "https://fougereble.itch.io/"
+    icon: simple-icons:itchdotio
+games:
+  eyebrow: "Ici, c'est mes jeux. Il y en a peu... pour le moment !"
+  title: Jeux

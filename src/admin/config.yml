@@ -1,0 +1,76 @@
+local_backend: true
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: src/assets
+public_folder: /assets
+locale: fr
+display_url: https://fougereble.fr
+logo_url: /assets/avatar.png
+
+collections:
+  - name: settings
+    label: Réglages du site
+    files:
+      - name: site
+        label: Accueil et footer
+        file: src/_data/site.yaml
+        fields:
+          - { name: title, label: Titre SEO, widget: string }
+          - { name: description, label: Description SEO, widget: text }
+          - { name: url, label: URL du site, widget: string }
+          - { name: lang, label: Langue, widget: string }
+          - { name: name, label: Nom, widget: string }
+          - { name: avatar, label: Photo sidebar, widget: image }
+          - { name: sidebar_bio, label: Bio sidebar, widget: text }
+          - { name: og_image, label: Image de partage, widget: image }
+          - { name: itch_url, label: URL Itch.io, widget: string }
+          - { name: youtube_url, label: URL YouTube, widget: string }
+          - name: social
+            label: Réseaux
+            widget: list
+            fields:
+              - { name: label, label: Nom, widget: string }
+              - { name: url, label: URL, widget: string }
+              - { name: icon, label: Icône Iconify, widget: string }
+          - name: games
+            label: Section jeux
+            widget: object
+            fields:
+              - { name: eyebrow, label: Sur-titre, widget: string }
+              - { name: title, label: Titre, widget: string }
+
+      - name: about
+        label: À propos
+        file: src/_data/about.yaml
+        fields:
+          - { name: eyebrow, label: Sur-titre, widget: string }
+          - { name: title, label: Titre, widget: string }
+          - { name: lead, label: Texte, widget: markdown }
+          - { name: cta_label, label: Bouton, widget: string }
+          - { name: cta_href, label: Lien du bouton, widget: string }
+
+  - name: games
+    label: Jeux
+    label_singular: Jeu
+    folder: src/games
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: yaml-frontmatter
+    summary: "{{title}}"
+    sortable_fields: ["order", "title"]
+    editor:
+      preview: false
+    fields:
+      - { name: title, label: Titre, widget: string }
+      - { name: order, label: Ordre d’affichage, widget: number, default: 10 }
+      - { name: image, label: Image, widget: image }
+      - { name: url, label: Lien Itch (ou autre), widget: string }
+      - { name: cta, label: Texte du bouton, widget: string, default: Jouer }
+      - name: categories
+        label: Tags
+        widget: list
+        allow_add: true
+      - { name: body, label: Description, widget: markdown }

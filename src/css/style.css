@@ -1,0 +1,391 @@
+:root {
+  --accent-color: #8fb43a;
+  --secondary-color: #161314;
+  --dark-color: #100d0e;
+  --grey-color: #9a938c;
+  --body-text-color: #f5f3eb;
+  --light-text-color: #c4bdb4;
+  --surface-color: #221c1e;
+  --card-color: #2a2326;
+  --line-color: #3a3234;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+  color-scheme: dark;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.6em;
+  color: var(--body-text-color);
+  background-color: var(--secondary-color);
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  font-weight: 700;
+  color: var(--body-text-color);
+}
+
+h1,
+.h1 {
+  font-size: 70px;
+  font-family: Inter, sans-serif;
+}
+
+h2,
+.h2 {
+  font-size: 36px;
+  font-family: Inter, sans-serif;
+}
+
+h3,
+.h3 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 580px) {
+  h1,
+  .h1 {
+    font-size: 42px;
+  }
+}
+
+em {
+  font-weight: 700;
+  font-style: italic;
+}
+
+p.lead-paragraph,
+.lead-paragraph {
+  font-size: 19px;
+  color: var(--light-text-color);
+  max-width: 42rem;
+}
+
+p {
+  font-family: "Nunito Sans", sans-serif;
+  color: var(--light-text-color);
+  font-size: 16px;
+}
+
+a {
+  color: var(--body-text-color);
+  text-decoration: none;
+  transition: all 0.3s ease-out;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.itch-icon {
+  display: inline-block;
+  font-size: 1.05em;
+  line-height: 1;
+  vertical-align: -0.18em;
+  margin-right: 0.4em;
+}
+
+.nav .itch-icon {
+  margin-right: 0;
+  font-size: 1em;
+}
+
+.btn-primary {
+  --bs-btn-color: #f5f2ea;
+  --bs-btn-bg: var(--accent-color);
+  --bs-btn-border-color: var(--accent-color);
+  --bs-btn-hover-color: #f5f2ea;
+  --bs-btn-hover-bg: #3a2f31;
+  --bs-btn-hover-border-color: #3a2f31;
+  transition: 0.5s;
+}
+
+a.btn.btn-primary.btn-lg,
+.btn.btn-primary.btn-lg,
+a.btn.btn-outline-primary.btn-lg,
+.btn.btn-outline-primary.btn-lg {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 18px 45px;
+  border-radius: 5px;
+}
+
+a.btn.btn-primary.btn-lg,
+.btn.btn-primary.btn-lg {
+  box-shadow: 0 25px 45px rgba(143, 180, 58, 0.16);
+}
+
+.btn-outline-primary {
+  --bs-btn-color: var(--body-text-color);
+  --bs-btn-border-color: var(--accent-color);
+  --bs-btn-hover-color: #f5f2ea;
+  --bs-btn-hover-bg: var(--accent-color);
+  --bs-btn-hover-border-color: var(--accent-color);
+  --bs-btn-active-color: #f5f2ea;
+  --bs-btn-active-bg: var(--accent-color);
+  --bs-btn-active-border-color: var(--accent-color);
+  background: transparent;
+  transition: 0.5s;
+}
+
+.game-card .btn-outline-primary {
+  font-weight: 600;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 5px;
+  align-self: stretch;
+  width: 100%;
+  box-shadow: none;
+  color: var(--grey-color);
+  border-color: var(--line-color);
+}
+
+.game-card .btn-outline-primary:hover {
+  color: #f5f2ea;
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.mid-break {
+  color: var(--line-color);
+  opacity: 1;
+  border-color: var(--line-color);
+  height: 1px;
+}
+
+.eyebrow {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin: 0 0 0.8rem;
+}
+
+section.navigation {
+  max-width: fit-content;
+  z-index: 20;
+}
+
+ul.nav.nav-pills {
+  background: var(--card-color);
+  display: grid;
+  border-radius: 60px;
+  width: 119px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills {
+  color: var(--accent-color);
+  background-color: transparent;
+}
+
+.nav-link {
+  color: var(--grey-color);
+}
+
+.nav a.nav-link {
+  font-size: 34px;
+  padding: 23px 0;
+}
+
+.nav {
+  padding: 38px 0;
+  --bs-nav-link-hover-color: var(--accent-color);
+  --bs-nav-link-active-color: var(--accent-color);
+}
+
+header {
+  background-color: var(--dark-color);
+  margin-top: 0;
+}
+
+.container.hero-container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img.hero-img {
+  display: block;
+  margin-inline: auto;
+  border: 10px solid rgba(143, 180, 58, 0.22);
+  object-fit: cover;
+  object-position: center;
+  width: 140px;
+  height: 140px;
+}
+
+header h2 {
+  color: var(--body-text-color);
+}
+
+header p,
+header a {
+  color: var(--grey-color);
+}
+
+header .btn-outline-primary {
+  color: var(--body-text-color);
+}
+
+header .btn-outline-primary:hover {
+  color: #f5f2ea;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.social-link.active,
+.social-link:hover {
+  color: var(--accent-color);
+}
+
+section#jeux {
+  padding-top: 80px;
+}
+
+.content-container {
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 1200px) {
+  .hero-sidebar header.hero {
+    position: fixed;
+    height: 100vh;
+    right: 0;
+    top: 0;
+    width: 25%;
+    padding: 0 1.5rem;
+  }
+}
+
+.game-grid {
+  list-style: none;
+  margin: 0 0 3rem;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.75rem;
+}
+
+.game-card {
+  background: var(--card-color);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.game-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: var(--dark-color);
+}
+
+.game-card-body {
+  padding: 0.7rem 0.85rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.game-card-body h3 {
+  font-size: 16px;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.about-copy {
+  max-width: 46rem;
+}
+
+.about-copy p {
+  font-size: 16px;
+}
+
+@media only screen and (max-width: 1199.98px) {
+  html {
+    scroll-padding-top: 1.5rem;
+  }
+
+  .hero-sidebar {
+    display: block;
+    padding: 0;
+  }
+
+  .hero-sidebar header.hero {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 2rem 1.5rem 2.25rem;
+  }
+
+  .hero-sidebar .hero-container {
+    height: auto;
+  }
+
+  section#jeux {
+    padding-top: 24px;
+  }
+
+  #a-propos {
+    padding-bottom: 80px;
+  }
+
+  section.navigation {
+    z-index: 99999;
+  }
+
+  ul.nav.text-center {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    margin: 0 !important;
+    border-radius: 0;
+    display: flex;
+    padding: 0;
+    justify-content: space-evenly;
+  }
+}
+
+@media only screen and (max-width: 580px) {
+  h1 {
+    word-break: break-word;
+  }
+}
